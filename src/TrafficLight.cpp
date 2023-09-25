@@ -69,6 +69,8 @@ void TrafficLight::simulate()
 // virtual function which is executed in a thread
 void TrafficLight::cycleThroughPhases()
 {
+
+    //method for random number generation found -> https://stackoverflow.com/questions/7560114/random-number-c-in-some-range
     std::random_device rd; // obtain random number from hardware
     std::mt19937 gen(rd()); //seed generator
     std::uniform_int_distribution<> distr(4000, 6000); //range
